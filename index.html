@@ -69,6 +69,9 @@
             if (guess !== toGuess){
                 lettersPlayed.push(guess);
                 console.log (lettersPlayed);
+                lettersPlayedText.textContent = lettersPlayed.join(" ,");
+                lives = lives +1;
+                livesText.textContent = lives;
                 if (lettersPlayed.length > 14){
                     alert ("you are not a mind reader")
                 }
@@ -83,10 +86,7 @@
             var guess = document.getElementById("playerGuess")["0"].select();
 
         }
-
-        function resetGame(){
-
-        }        
+      
     
 
     </script>
