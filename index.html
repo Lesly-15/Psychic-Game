@@ -26,7 +26,8 @@
     <br>
     <form id="playerGuess"> 
         <input type="text" placeholder="Which letter I'm thinking of?">
-        <input type="button" value="Submit your guess" onclick="playerTryToGuess();">  
+        <input type="button" value="Submit your guess" onclick="playerTryToGuess();"> 
+        <input type="button" value="Reset" onclick="location.reload();"> 
     </form>
     
     <br>
@@ -41,7 +42,7 @@
         var letterChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
         "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-        var lettersPlayed = [""];
+        var lettersPlayed = [''];
         var lettersPlayedText=document.getElementById("lettersPlayed");
             lettersPlayedText.textContent = lettersPlayed;
         
@@ -61,12 +62,16 @@
             // player will enter the letter is guessing
             var guess = document.getElementById("playerGuess")["0"].value;
                 console.log(guess);
+            
 
             // compare user guess vs random letter
             // check if wrong...
             if (guess !== toGuess){
                 lettersPlayed.push(guess);
                 console.log (lettersPlayed);
+                if (lettersPlayed.length > 14){
+                    alert ("you are not a mind reader")
+                }
                 
             }
             // check if right...
@@ -74,11 +79,13 @@
                 alert("WOW! you are a great mind reader");
 
             }
-            // check if entered smth different than a letter
-            else (guess)
-            
-            // if right, winner
-            // if wrong, rest lives
+
+            var guess = document.getElementById("playerGuess")["0"].select();
+
+        }
+
+        function resetGame(){
+
         }        
     
 
