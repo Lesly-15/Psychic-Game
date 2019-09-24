@@ -12,28 +12,55 @@
     <br> 
     
     <div>
-    <p>do you think you can guess what I'm thinking?...</p>
-    <p> you have 10 tries </p> 
+    <p> do you think you can guess what I'm thinking?...</p>
+    <p> you have <span id="lives"></span> tries </p> 
+    
     </div>
 
     <div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Zoom9_6fyZHl3QaW4wzd0_ambwHZPHtsbCGuarjH67nh2Jui_w"/>
     </div>
+    <br>
+    <div> Enter your guess here</div>
+    <br>
+    <form id="playerGuess">
+        <input type="text" placeholder="What letter I'm thinking of?">
+        <input type="button" value="Submit your guess" onclick="playerGuess">  
+    </form>
+    
+    <br>
+    <div>
+        <p> You have already played <span id="letterPlayed"> letter </span></p>
+    </div>
 
-    <script type="text/javascript">
 
+    <script> 
+    
         // Define the alphabet array
         var letterChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", 
         "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-        // Pick a random letter to be guessed
-        var toGuess = letterChoice[Math.floor(Math.random() * letterChoice.length)];
-        console.log (toGuess);
-
-        // 
         
+        // // Define the secret letter variable
+        // var secretLetter = randomLetter;
+            
+
+        // // This will generate the random letter for the player to guess - why it does not work when I declare it as a function?
+        // function randomLetter () {
+                 var toGuess = letterChoice[Math.floor(Math.random() * letterChoice.length)];
+                console.log (toGuess);
+        // }
+        
+        // ***How the game works:
+        function playerGuess() {
+                // 1. First receive an input with the player guess...
+                var guess = document.getElementById("playerGuess") [0].value;
+
+        }
+
+
+          
+    
 
     </script>
-
 </body>
 </html>
