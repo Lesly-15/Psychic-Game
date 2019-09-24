@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+    color: navy;
+    font-family: 'Rancho', cursive;
+    
+}
+
+form {
+    width: 600px;
+    margin:auto;
+    background-color: plum;
+    
+}
+
+p {
+    font-family: 'Delius', cursive;
+    color: purple;
+}
+
+span {
+    font-weight: bolder;
+    color: black;
+}
+
+input {
+    align-self: center;
+ 
+}
+
+
+#divGuess {
+    
+    font-family: 'Delius', cursive;
+    color: purple;
+    text-align: center;
+
+}
+
+img {
+    align-content: center;
+    border-radius: 150px;
+}

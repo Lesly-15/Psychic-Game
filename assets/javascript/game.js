@@ -4,12 +4,12 @@
 
         var lettersPlayed = [''];
         var lettersPlayedText=document.getElementById("lettersPlayed");
-            lettersPlayedText.textContent = lettersPlayed;
+            
         
         // player will have only 15 lives to guess the right letter
         var lives = 0;
         var livesText = document.getElementById ("lives");
-            livesText.textContent = lives;
+            
  
         // This will generate the random letter for the player to guess - why it does not work when I declare it as a function? 
         // Why it generates a number instead of a letter?
@@ -40,7 +40,8 @@
 
             }
 
-            var guess = document.getElementById("playerGuess")["0"].select();      
+            var guess = document.getElementById("playerGuess")["0"].select();
+        }      
     
 
         
