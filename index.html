@@ -24,8 +24,8 @@
     <br>
     <div> Enter your guess here</div>
     <br>
-    <form>
-        <input type="text" placeholder="What letter I'm thinking of?">
+    <form id="playerGuess"> 
+        <input type="text" placeholder="What I'm thinking of?">
         <input type="button" value="Submit your guess" onclick="playerTryToGuess();">  
     </form>
     
@@ -57,6 +57,8 @@
         // ***How the game works:
         function playerTryToGuess() {
             // player will enter the letter is guessing
+            var guess = document.getElementById("playerGuess")["0"].value;
+                console.log(guess);
             // compare player input vs random letter
             // check if right or wrong
             // if right, winner
